@@ -1,0 +1,22 @@
+<div id="container">
+	<div class="login">
+		<form (ngSubmit)="login()" class="form">
+			<div class="form_field">
+				<label for="username"><i class="fa fa-user icon" aria-hidden="true"></i></label>
+			    <input type="text" id="username" class="form-input" name="username" [(ngModel)]="data.username" placeholder="Username" required>
+			</div>
+			<div class="form_field">
+				<label for="password"><i class="fa fa-key icon" aria-hidden="true"></i></label>
+			    <input type="password" class="form-input" name="password" [(ngModel)]="data.password" placeholder="Password" required>
+			</div>
+			<div class="form_field">
+		  		<input type="submit" value="Sign In">
+		  	</div>
+		</form>
+		<p class="align-center">
+			Not a member?
+			<a [routerLink]="['/register']" class="">Sign up now</a>
+		</p>
+		<p class="error align-center">{{error}}</p>
+	</div>
+</div>

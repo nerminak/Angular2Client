@@ -1,0 +1,45 @@
+<div *ngIf="error">
+	<p class="error">{{error}}</p>
+	<a [routerLink]="['/login']">SIGN IN</a>
+</div>
+<div class="container">
+	<div class="top">
+		<div class="logo fl">
+			<a href="#"><img src="app/images/logo.png" alt="logo"/></a>
+		</div>
+		<div id="header">
+			<div class="fl userdetail">
+				<i class="fa fa-user" aria-hidden="true"></i>
+				{{user.username}} {{user.lastName}}({{user.email}})
+				<span (click)="showMenu()">
+					<i class="fa fa-caret-down arrow" aria-hidden="true"></i>
+				</span>
+			</div>
+			<div id="submenu" class="fr">
+				<a (click)="logout()" class="logout">SIGN OUT</a>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="content-img">
+			<img src="app/images/BLOG-Kosovo-1200x675.png" alt="blog-kosovo"/>
+		</div>
+		<div class="description">
+			<h3>Kosovo Bound</h3>
+			<div>
+				At Market Technologies Inc., we’re constantly growing our internal business processes to help our clients perform better in retail environments. Our goal is to be the industry leaders when it comes to exacting retail intelligence and offering the best in-store marketing solutions possible to our clients to help them be successful.
+			</div>
+			<h3>Kosovo, Here We Come!</h3>
+			<div>
+				Our ventures have led us to expand, both in our staff and our offices, which is why we’re excited to officially announce that we’ve opened an office overseas in Pristina, Kosovo! This office will not only allow us to grow and expand our technology resources to better serve our clients, but also continue to build relationships with clients throughout Europe.
+			</div>
+			<h3>Grow with Us</h3>
+			<div>
+				We’re excited to continue growing in 2017 and look forward to what the year will bring! If you’re looking to grow your in-store marketing efforts this year, contact Market Technologies Inc., today! With offices both in the United States and Kosovo, our team is here to help grow your business when you’re ready. Contact us at 1-231-237-4141.
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		&copy; Copyright 2017
+	</div>
+</div>
